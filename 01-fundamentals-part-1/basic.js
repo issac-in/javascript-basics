@@ -1,23 +1,23 @@
-console.log("Goodbye World!");
+// console.log("Goodbye World!");
 
-let message = "Hello";
-alert(message);
+// let message = "Hello";
+// alert(message);
 
 // Multiple variable declaration in one line is doable,
-//let user = "John", age = 25, msg = "Hello";
+// let user = "John", age = 25, msg = "Hello";
 
 // but single line per variable is my preference like so
-let user = "John";
-let age = 25;
-let msg = "Hello";
+// let user = "John";
+// let age = 25;
+// let msg = "Hello";
 
 // In older JS scripts, I may run into another keyword - var instead of let. They're almost the exact same - there are subtle differences.
 
-message = "World";
-alert(message);
+// message = "World";
+// alert(message);
 
-message = user;
-alert(message);
+// message = user;
+// alert(message);
 
 // A variable should only be declared once. A repeated declaration of the same variable will trigger an error.
 
@@ -27,11 +27,11 @@ alert(message);
 
 // Hyphens are not allowed in variable names, and variables are case-sensitive.
 
-let userName; // valid
-let user_name; // valid
-let user123; // valid
-let $; // valid
-let _; // valid
+// let userName; // valid
+// let user_name; // valid
+// let user123; // valid
+// let $; // valid
+// let _; // valid
 
 // When the name contains multiple words camelCase is used.
 // It's international convention to use only English in variable names, even if we can use any language technically.
@@ -45,17 +45,17 @@ let _; // valid
 // 'use strict' in our scripts to maintain compability with older scripts.
 
 // To declare a constant, unchanging variable, use `const` instead of `let`
-const myBirthday = "18.04.1982"; // You cannot reassign the const once declared.
+// const myBirthday = "18.04.1982"; // You cannot reassign the const once declared.
 
 // Good practice to use constants as alias for difficult to remember values that are known PRIOR to execution, aka hard-coded values.
 // Such constatnts are named using capital letters and underscores
 
-const COLOR_RED = "#F00";
-const COLOR_GREEN = "#0F0";
-const COLOR_BLUE = "#00F";
+// const COLOR_RED = "#F00";
+// const COLOR_GREEN = "#0F0";
+// const COLOR_BLUE = "#00F";
 // ... when we need to pick a color
-let color = COLOR_BLUE;
-alert(color);
+// let color = COLOR_BLUE;
+// alert(color);
 
 // When constants values are calculated in run-time, DURING the execution, just name the constant variables using normal camelCase.
 
@@ -65,3 +65,17 @@ alert(color);
 // let - is a modern variable declaration
 // const -is like let, but the value of the variable cannot be changed
 // var - is an old school variable declaration. The subtle differences to let, can be worried about later. Just know it's different.
+
+// Task - Working with variables
+let admin;
+let name;
+name = "John";
+admin = name;
+alert(admin);
+
+// Task - Giving the right name
+let earth = "Earth";
+let currUser = "user";
+
+// A variable name with 3 words in it is fine. 4 Words gets a bit too verbose.
+
