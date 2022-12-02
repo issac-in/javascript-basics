@@ -162,3 +162,25 @@ console.log(typeof z, typeof zz);
 // When using ==, z and zz will be equal. But when using ===, z and zz are not equal.
 
 // Note: Comparing two JS objects ALWAYS returns FALSE, no matter if == or ===
+
+
+// URL: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Test_your_skills:_Math
+const lotsOfDecimal = 1.766584958675746364;
+console.log(lotsOfDecimal);
+const twoDecimalPlaces = lotsOfDecimal.toFixed(2);
+console.log(twoDecimalPlaces);
+
+let myNumber = "74";
+myNumber = Number(myNumber) + 3;
+console.log(myNumber);
+
+console.log(Math.pow(4,2)); // this is equivalent to 4**2, just an older way of doing the same thing
+
+// x++ and x-- are post increment/decrement. You return the value then increment/decrement it.
+// ++x and --x are pre increment/decrement. You increment/decrement it then return the value.
+
+// === is strict equality operator, testing if left and right values AND datatypes are identical to each other
+// !== is strict non equality operator, testing if left and right values AND datatypes are NOT identical to one another.
+
+// == and != are equality/non-equality operators,t esting only if the left and right values are identical/not-identical, they dont care about datatypes matching or not.
+
