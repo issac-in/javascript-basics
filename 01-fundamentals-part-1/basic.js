@@ -184,3 +184,29 @@ console.log(Math.pow(4,2)); // this is equivalent to 4**2, just an older way of 
 
 // == and != are equality/non-equality operators,t esting only if the left and right values are identical/not-identical, they dont care about datatypes matching or not.
 
+
+// URL: https://javascript.info/operators
+
+// An operator is unary if it has a single operand
+let xx = 1;
+xx = -x;
+console.log(x); // -1, unary negation was applied
+
+// An operator is binary if it has two operands
+let yy = 2;
+let zzz = 3;
+console.log(zzz - yy); // 1, binary minus subtract values
+
+// Unary Operator - is also known as the negation operator
+// Unary Operator + does the same thing as Number(...) but shorter. Doesn't do anything to numbers. But if operand isn't a number, it converts it to a number.
+
+// Unary Operators have a higher precedence than binary operators.
+
+// = is a binary operator, that's known as the assignment operator
+// In JS, all operators return a value, including this way, so you can technically do stuff like this
+let g = 1;
+let h = 2;
+let i = 3 - (g = h + 1); // The call x = value, writes the value into x AND THEN RETURNS IT
+console.log(g, i); // 3 0
+
+// Last working through - Chaining Asignments
