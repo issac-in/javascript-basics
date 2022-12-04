@@ -113,7 +113,7 @@ console.assert(fruitsChar === "A", "Expected charAt(0) is wrong.");
 
 // JS String - charCodeAt() - returns unicode (UTF-16 code) of the character at specific index in the string
 let fruitsCharCode = FRUITS.charCodeAt(0);
-console.assert(fruitsCharCode === 41, "Expected charCodeAt(0) is wrong.");
+console.assert(fruitsCharCode === 65, "Expected charCodeAt(0) is wrong.");
 
 // JS String - [] - property access on strings is also a way to extract string characters
 let fruitsPropertyAccess = FRUITS[0];
@@ -126,4 +126,12 @@ console.assert(fruitsPropertyAccess === "A", "Expected FRUITS[0] is wrong.");
         3. It is read only. FRUITS[0] = "U" gives no error, but will not work at all.
 */
 
-//
+// JS String - split() - convert string to array, where each element in array is separated by the input string
+const splitArrA = FRUITS.split(", ");
+console.assert(splitArrA[1] === "Banana", "Expected split(', ') is wrong.");
+
+const splitArrB = FRUITS.split(); // array index 0 will contain the whole string
+console.assert(splitArrB[0] === FRUITS, "Expected split() is wrong.");
+
+const splitArrC = FRUITS.split(""); // array of single characters
+console.assert(splitArrC[3] === "l", "Expected split('') is wrong.");
