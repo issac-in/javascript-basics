@@ -135,3 +135,7 @@ console.assert(splitArrB[0] === FRUITS, "Expected split() is wrong.");
 
 const splitArrC = FRUITS.split(""); // array of single characters
 console.assert(splitArrC[3] === "l", "Expected split('') is wrong.");
+
+/* 
+    URL to detailed String Reference Page: https://www.w3schools.com/jsref/jsref_obj_string.asp
+*/
