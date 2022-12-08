@@ -111,3 +111,19 @@
  * You should be use arrays when you want the element names to be numbers.
  */
 
+// JavaScript new Array() vs []
+/**
+ * Both work to create arrays, but be careful when only passing in a single argument to new Array()
+ */
+() => {
+    const arrA = new Array(); // no problem, same thing
+    const arrB = []; // no problem, same thing
+
+    const arrC = new Array(40, 100, 1); // no problem, same thing
+    const arrD = [40, 100, 1]; // no problem, same thing
+
+    // THESE TWO ARE DIFFERENT
+    const arrE = new Array(40); // Create an array with 40 undefined elements
+    const arrF = [40]; // create an array with one element, 40.
+}
+
