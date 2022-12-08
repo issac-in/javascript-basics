@@ -67,4 +67,8 @@
     
     let firstCar = cars[0]; // Access first Array element
     let lastCar = cars[carsLength - 1]; // Access last Array element
+    
+    cars.push("Hyundai"); // Adds a new element 'Hyundai' to cars
+    cars[cars.length] = "BMW"; // Another way to add new element to array, be careful.
+    cars[6] = "Tesla"; // Works, but will create undefined "holes" in array, be careful.
 }
