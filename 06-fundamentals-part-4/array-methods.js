@@ -8,4 +8,9 @@
     cars.pop(); // removes last element from array, and returns the value that was "popped out" aka 'Hyundai'
     cars.length; // currently 3
     cars.push("Hyundai"); // adds a new element to the end of array, returning new array length of 4
+    cars.shift(); // removes 1st element from array and "shifts" all other elements to a lower index, returning value that was "shifted out" aka "Toyota"
+    cars.unshift("Toyota"); // adds a new element to beginning of array, "unshifting" older elements, returning new array length of 4
+    cars[2] = "Nissan"; // Array elements are accessed using their index number and can be changed like so
+    cars[cars.length] = "Subaru"; // Easy way to append a new element to the array
+    
 }
