@@ -17,3 +17,17 @@
     const cars = new Array("Toyota", "Honda", "Kia");
 }
 
+// Accessing Array Elements
+
+// Can access array elements by referring to the respective index number
+() => {
+    const cars = ["Toyota", "Honda", "Kia"];
+    let car = cars[0];
+}
+
+// Changing an Array Element
+() => {
+    const cars = ["Toyota", "Honda", "Kia"];
+    cars[0] = "Hyundai"; // Changes the value of the first element in cars
+}
+
