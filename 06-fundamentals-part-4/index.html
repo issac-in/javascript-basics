@@ -7,9 +7,32 @@
     <body>
         <h1>JS Arrays</h1>
         <p id="access-the-full-array-example"></p>
+        <p id="for-loop-thru-array-example"></p>
+        <p id="for-each-thru-array-example"></p>
         <script>
             const cars = ["Toyota", "Honda", "Kia"];
             document.getElementById("access-the-full-array-example").innerHTML = cars;
+        </script>
+        <script>
+            const fruits = ["Apple", "Banana", "Cranberry"];
+            let fruitsLength = fruits.length;
+            let list = "<ul>";
+            for (let i = 0; i < fruitsLength; i++) {
+                list += "<li>" + fruits[i] + "</li>";
+            }
+            list += "</ul>";
+            document.getElementById("for-loop-thru-array-example").innerHTML = list;
+        </script>
+        <script>
+            const games = ["Elden Ring", "Valorant", "Minecraft"];
+            let text = "<ul>";
+            games.forEach(myConcat);
+            text += "</ul>";
+
+            function myConcat(value) {
+                text += "<li>" + value + "</li>";
+            }
+            document.getElementById("for-each-thru-array-example").innerHTML = text;
         </script>
         <script src="./arrays.js"></script>
     </body>

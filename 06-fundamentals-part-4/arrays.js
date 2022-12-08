@@ -56,3 +56,15 @@
     const myArray = [Date.now, myFunction(), cars];
 }
 
+// Array Properties and Methods
+/**
+ * JS Arrays real strengths are from its built-in properties and methods,
+ * like the length property and sort() method.
+ */
+() => {
+    const cars = ["Toyota", "Honda", "Kia"];
+    let carsLength = cars.length; // Returns the number of array elements in cars
+    
+    let firstCar = cars[0]; // Access first Array element
+    let lastCar = cars[carsLength - 1]; // Access last Array element
+}
