@@ -72,3 +72,42 @@
     cars[cars.length] = "BMW"; // Another way to add new element to array, be careful.
     cars[6] = "Tesla"; // Works, but will create undefined "holes" in array, be careful.
 }
+
+// Associative Arrays
+/**
+ * Associative arrays (aka hashes) are arrays with named indexes.
+ * JS does NOT support arrays with named indexes.
+ * In JS, arrys ALWAYS use NUMBERED indexes.
+ * 
+ * WARNING: If you use named indexes on an array,
+ * JS will redefine the array to an object. After that,
+ * some array methods & properties will produce incorrect results.
+ */
+() => { // Normal Usage
+    const person = ["John", "Doe", 46];
+    person.length; // returns 3
+    person[0]; // returns 'John'
+}
+() => { // Warning Usage
+    const person = [];
+    person["firstName"] = "John";
+    person["lastName"] = "Doe";
+    person["age"] = 46;
+    person.length; // will return 0
+    person[0]; // will return undefined
+}
+
+// The Difference Between Arrays and Objects
+/**
+ * In JS, ARRAYS use NUMBERED indexes.
+ * In JS, OBJECTS use NAMED indexes.
+ * Arrays are a special kind of objects, with numbered indexes.
+ */
+
+// When to use Arrays, when to use Objects.
+/**
+ * JS does not support associative arrays.
+ * You should use objects when you want the element names to be strings (text).
+ * You should be use arrays when you want the element names to be numbers.
+ */
+
