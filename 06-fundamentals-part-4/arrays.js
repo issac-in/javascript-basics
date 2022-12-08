@@ -127,3 +127,11 @@
     const arrF = [40]; // create an array with one element, 40.
 }
 
+// How to recognize an array
+() => {
+    const cars = ["Toyota", "Honda", "Kia"];
+    let type = typeof cars; // Will return "object". This is not what we want.
+
+    Array.isArray(cars); // returns true if Array, this is what we want.
+    cars instanceof Array; // returns true if Array, this is what we want. 
+}
