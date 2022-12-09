@@ -79,7 +79,7 @@
      * JS automatically converts an array to a comma separated string when a primitive value is expected.
      * This is always the case when you try to output an array.
      * 
-     * NOTE: All JS objects have a toString() method.
+     * NOTE: All JS objects have a toString()
      */
     () => {
         const cars = ["Toyota", "Hyundai", "Kia", "Nissan"];
@@ -88,5 +88,6 @@
         //document.getElementById("demo").innerHTML = fruits.toString();
         //document.getElementById("demo").innerHTML = fruits;
     }
-    
+
+    // There are no built in functions to find the highest or lowest value in a JS array.
 }
