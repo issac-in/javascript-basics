@@ -5,7 +5,13 @@ const refused = document.querySelector('.refused');
 admitted.textContent = 'Admit: ';
 refused.textContent = 'Refuse: ';
 
-// loop starts here
-
-// refused.textContent += ;
-// admitted.textContent += ;
+for (const person of people) {
+    switch (person) {
+        case "Phil":
+        case "Lola":
+            refused.textContent += person + ", ";
+            break;
+        default:
+            admitted.textContent += person + ", ";
+    }
+}
