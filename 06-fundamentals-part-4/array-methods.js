@@ -40,4 +40,28 @@
         const moreCars = cars.concat("Volkswagen", "Audi", "BMW");
         // Result is ["Hyundai", "Kia", "GM Korea","Toyota", "Honda", "Nissan","Jeep", "Ford", "Tesla","Volkswagen", "Audi", "BMW"]
     }
+
+    /**
+     * Splicing and Slicing Arrays
+     * 
+     * The splice() method adds new items to an array
+     * The slice() method slices out a piece of an array
+     */
+    () => {
+        // Splice Parameters:
+        // 1st Param - Defines the position aka index where new elements should be added (spliced in)
+        // 2nd Param - Defines how many elements should be removed.
+        // Rest of Param - define the new elements to be added
+        const cars = ["Toyota","Hyundai","Jeep", "Audi"];
+        cars.splice(2, 0, "Kia", "GM Korea"); // cars is now ["Toyota", "Hyundai", "Kia", "GM Korea", "Jeep", "Audi"]
+
+        // splice() method returns an array with the deleted items:
+        let removed = cars.splice(2, 2, "Tesla", "Ford"); // cars is now ["Toyota", "Hyundai", "Tesla", "Ford", "Jeep", "Audi"]
+        removed; // holds ["Kia", "GM Korea"]
+
+        // splice() can be used to remove elements w/o leaving undefined holes in the array
+        cars.splice(2, 1); // remove 1 element from the 2nd index of cars
+        cars; // cars is now ["Toyota", "Hyundai", "Ford", "Jeep", "Audi"] 
+        // Note that the removal also has shifted the elements in the array accordingly.
+    }
 }
