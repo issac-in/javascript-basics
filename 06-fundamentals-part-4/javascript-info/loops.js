@@ -57,4 +57,70 @@
  *   (i > 5) ? alert(i) : continue;
  */
 
-// TODO - I'm on the section labels for break/continue;
+/**
+ * Labels for break/continue
+ * 
+ * Sometimes, we need to break out from multiple nested loops at once.
+ * For example, look at the following code:
+ * 
+ *  for (let i = 0; i < 3; i++) {
+ *      for (let j = 0; j < 3; j++) {
+ *          let input = prompt(`Value at coords (${i},${j})`, '');
+ * 
+ *          // What if I wanted to exit from here to Done (below)?
+ *      }
+ *  }
+ * 
+ *  alert('Done!');
+ * 
+ * We need a way to stop the process if the user canels the input. 
+ * An ordinary break after input would only break the inner loop - this where labels come in.
+ * 
+ * A label is an identifier with a colon before a loop, for example:
+ * 
+ *  labelName: for (...) { ... }
+ * 
+ * The break <labelName> statement in the loop below breaks out to the label:
+ * 
+ *  outer: for (let i = 0; i < 3; i++) {
+ *      for (let j = 0; j < 3; j++) {
+ *          let input = prompt(`Value at coords (${i},${j})`, '');
+ * 
+ *          // If an empty string or canceled, then break out of both loops
+ *          if (!input) break outer; // (*)
+ * 
+ *          // do something with the value...
+ *      }
+ *  }
+ * 
+ *  alert('Done!');
+ * 
+ * In the code above, break outer looks upwards for the label named outer and breaks out of that loop.
+ * So the control goes straight from (*) to alert('Done!').
+ * 
+ * We can also move the label onto a separate line, like so:
+ * 
+ *  outer:
+ *  for (let i = 0; i < 3; i++) {...}
+ * 
+ * The continue directive can also be used with a label. In this case, code execution jumps to the next iteration
+ * of the label loop. 
+ * 
+ * WARNING: Labels do not allow us to "jump" anywhere. They don't allow us to jump into an arbitrary place in the code.
+ * For example, it's impossible to do this:
+ * 
+ *  break label; // jump the label below (doesn't work)
+ *  
+ *  label: for {...}
+ * 
+ * A break directive MUST be inside a code block. Technically, any labelled code block will do, e.g.:
+ * 
+ *  label: {
+ *      //...
+ *      break label;
+ *      //...
+ *  }
+ * 
+ * Although, 99.99% of the time break is used inside loops, as we've seen in the examples above.
+ * A continue is only possible from inside a loop.
+ */
