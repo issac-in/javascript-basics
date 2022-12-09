@@ -44,8 +44,8 @@
     /**
      * Splicing and Slicing Arrays
      * 
-     * The splice() method adds new items to an array
-     * The slice() method slices out a piece of an array
+     * The splice() method adds new items to an array  - does CHANGE original arrray
+     * The slice() method slices out a piece of an array - does NOT CHANGE original array
      */
     () => {
         // Splice Parameters:
@@ -63,5 +63,14 @@
         cars.splice(2, 1); // remove 1 element from the 2nd index of cars
         cars; // cars is now ["Toyota", "Hyundai", "Ford", "Jeep", "Audi"] 
         // Note that the removal also has shifted the elements in the array accordingly.
+    }
+    () => {
+        /**
+         * slice() method slices out a piece of an array into a new array.
+         * slice() creates a new array. It does not remove any elements from source array.
+         */
+        const cars = ["Toyota","Hyundai","Jeep", "Audi"];
+        const aFewCars = cars.slice(1); // Slices out part of cars starting from index 2, aka "Jeep", result is ["Hyundai", "Jeep", "Audi"]
+        const aCoupleCars = cars.slice(1,3); // Selects elements from start argument inclusive, up to end argument exclusive like [1,3), result is ["Hyundai","Jeep"]
     }
 }
