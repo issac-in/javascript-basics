@@ -73,4 +73,20 @@
         const aFewCars = cars.slice(1); // Slices out part of cars starting from index 2, aka "Jeep", result is ["Hyundai", "Jeep", "Audi"]
         const aCoupleCars = cars.slice(1,3); // Selects elements from start argument inclusive, up to end argument exclusive like [1,3), result is ["Hyundai","Jeep"]
     }
+
+    // Automatic toString()
+    /**
+     * JS automatically converts an array to a comma separated string when a primitive value is expected.
+     * This is always the case when you try to output an array.
+     * 
+     * NOTE: All JS objects have a toString() method.
+     */
+    () => {
+        const cars = ["Toyota", "Hyundai", "Kia", "Nissan"];
+
+        // These two lines will produce the EXACT same result
+        //document.getElementById("demo").innerHTML = fruits.toString();
+        //document.getElementById("demo").innerHTML = fruits;
+    }
+    
 }
