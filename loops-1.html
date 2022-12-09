@@ -29,10 +29,12 @@
     const list = document.createElement('ul');
 
     // Add your code here
-    for (const food of myArray) {
-        const item = document.createElement('li');
-        item.textContent = food;
-        list.appendChild(item);
+    let i = 0;
+    while (i < myArray.length) {
+      const item = document.createElement('li');
+      item.textContent = myArray[i];
+      list.appendChild(item);
+      i++;
     }
     // Don't edit the code below here!
 
