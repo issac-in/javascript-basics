@@ -1,11 +1,16 @@
 # DOM Manipulation and Events - The Odin Project
 
 ## Notes
+- The difference between a "nodelist" and an "array of nodes", is that even though a "nodelist" looks like an array, and somewhat acts like an array, several array methods are missing from nodelists. If needed though, you can convert the nodelist into an array, apparently via Array.from() or with the spread operator.
 
 ## Knowledge Check
 > What is the DOM?
 
+The DOM (or Document Object Model) is a tree-like representation of the contents of a webpage. It is a tree of "nodes" with different relationships depending on how they are arranged within the HTML document.
+
 > How do you target the nodes you want to work with?
+
+To target the nodes you want to work with, within the DOM, you use "selectors". You can do this by using a combination of CSS-style selectors and relationship properties to target the nodes you want.
 
 > How do you create an element in the DOM?
 
@@ -30,6 +35,8 @@
 > How do you attach listeners to groups of nodeS?
 
 > What is the difference between the return values of `querySelector` and `querySelectorAll`?
+
+`element.querySelector(selector)` returns a reference to the first match of selector. On the other hand, `element.querySelectorAll(selectors)` returns a "nodelist" containing references to all of the matches of the selectors.
 
 > What do as a "nodelist" contain?
 
