@@ -67,7 +67,15 @@ Alternatively, you can link the JavaScript file in the `<head>` of your HTML doc
 
 > How do "events" and "listeners" work?
 
+Events are how we can manipulate the DOM with JavaScript dynamically. More specifically, Events are actions that occur on your webpage such as mouse-clicks or keypresses, and by using JavaScript, we can make our webpage listen and react to these events.
+
 > What are three ways to use events in your code?
+
+1. You can attach functions' attributes directly on your HTML elements
+2. You can set the "on_event_" property on the DOM object in your JavaScript
+3. You can attach event listeners to the nodes in your JavaScript.
+
+All three ways are regularly used, but using event listeners is definitively the preferred method.
 
 > Why are event listeners the preferred way to handle events?
 
