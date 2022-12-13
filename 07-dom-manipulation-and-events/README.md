@@ -2,6 +2,7 @@
 
 ## Notes
 - The difference between a "nodelist" and an "array of nodes", is that even though a "nodelist" looks like an array, and somewhat acts like an array, several array methods are missing from nodelists. If needed though, you can convert the nodelist into an array, apparently via Array.from() or with the spread operator.
+- Keep in mind that JavaScript *does not* alter your HTML, but the DOM - your HTML file will look the same, but the JavaScript changes what the browser renders.
 
 ## Knowledge Check
 > What is the DOM?
@@ -53,6 +54,16 @@ Just for reference, to show how to use either:
 To combat that risk, if you must use *innerHTML* (like to inject dynamic HTML into your page), make sure that nothing goes into that *innerHTML* is sent to you by the user unless you first escape that user input, and ensure it'll always render as a string, no matter what, and not possible to render as HTML, but only as text.
 
 > Where should you include your JavaScript tag in your HTML file when working with DOM nodes?
+
+**Answer:** The simplest way is to include your JavaScript at the bottom of your HTML file.
+
+**Explanation:** JavaScript for the most part is ran whenever the JS file is ran, or when the script tag is encountered in the HTML. If you have included your JavaScript at the top of your file, many of these DOM manipulation methods won't work because the JS code is being run *before* the nodes are created in the DOM. That's why the simplest answer above is given, so that it gets run after the DOM nodes are parsed and created.
+
+Alternatively, you can link the JavaScript file in the `<head>` of your HTML document. Use the `<script>` tag with the `src` attribute containing the path to the JS file, and include the `defer` keyword to load the file *after* the HTML is parsed, as such:
+
+`<head> <script src="js-file.js" defer></script> </head>` // This way is good practice for modern browsers
+
+**Note:** According to MDN, it is bad practice to pollute your HTML with JavaScript, and it's inefficient.
 
 > How do "events" and "listeners" work?
 
