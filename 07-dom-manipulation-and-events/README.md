@@ -3,6 +3,7 @@
 ## Notes
 - The difference between a "nodelist" and an "array of nodes", is that even though a "nodelist" looks like an array, and somewhat acts like an array, several array methods are missing from nodelists. If needed though, you can convert the nodelist into an array, apparently via Array.from() or with the spread operator.
 - Keep in mind that JavaScript *does not* alter your HTML, but the DOM - your HTML file will look the same, but the JavaScript changes what the browser renders.
+- Useful events to keep in mind are: click, dblclick, keydown, keyup, etc.
 
 ## Knowledge Check
 > What is the DOM?
@@ -83,7 +84,9 @@ All three ways are regularly used, but using event listeners is definitively the
 
 Using named funtions in your listeners can clean up your code considerably, and is a really good idea if the function is something you are going to want to do in multiple places.
 
-> How do you attach listeners to groups of nodeS?
+> How do you attach listeners to groups of nodes?
+
+Using `querySelectorAll` we can get a nodelist of all of the items matching a specific selector, then to add to a listener to each item, we can iterate through the whole list w/ a loop, to do things more efficiently.
 
 > What is the difference between the return values of `querySelector` and `querySelectorAll`?
 
