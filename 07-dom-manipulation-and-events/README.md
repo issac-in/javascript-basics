@@ -81,6 +81,8 @@ All three ways are regularly used, but using event listeners is definitively the
 
 > What are the benefits of using named functions in your listeners?
 
+Using named funtions in your listeners can clean up your code considerably, and is a really good idea if the function is something you are going to want to do in multiple places.
+
 > How do you attach listeners to groups of nodeS?
 
 > What is the difference between the return values of `querySelector` and `querySelectorAll`?

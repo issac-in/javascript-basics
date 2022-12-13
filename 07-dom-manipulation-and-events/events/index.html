@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./logic.js" defer></script>
+</head>
+<body>
+    <h1>3 Buttons, 3 Ways of alerting "Hello World" when clicked</h1>
+    <p>Note that all 3 of these methods can be used with named functions</p>
+    <ul>
+        <li>Using named functions can clean up your code considerably, and is a really good idea if the function is something that you are going to want to do in multiple pieces.</li>
+        <li>With all three methods, we can access more information about the event by passing a parameter to the function that we are calling.</li>
+    </ul>
+
+    <!-- Less than ideal, because we're cluttering the HTML w/ JS. -->
+    <!-- Also, we can only have 1 "onclick" event per element. -->
+    <button onclick="alert('Hello World')">Method 1 - Click Me</button>
+
+    <!-- We moved the JS out of the HTML into an JS file, which is good. -->
+    <!-- We can still only have 1 "onclick" event per element though. -->
+    <button id="btn-2">Method 2 - Click Me</button>
+
+    <!-- Method 3 is much more flexible & powerful, but is more complex to set up. -->
+    <!-- Allows separation of concerns, and allows multiple event listeners as needed. -->
+    <button id="btn-3">Method 3 - Click Me Too</button>
+</body>
+</html>
