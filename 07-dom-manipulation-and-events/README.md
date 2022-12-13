@@ -4,6 +4,7 @@
 - The difference between a "nodelist" and an "array of nodes", is that even though a "nodelist" looks like an array, and somewhat acts like an array, several array methods are missing from nodelists. If needed though, you can convert the nodelist into an array, apparently via Array.from() or with the spread operator.
 - Keep in mind that JavaScript *does not* alter your HTML, but the DOM - your HTML file will look the same, but the JavaScript changes what the browser renders.
 - Useful events to keep in mind are: click, dblclick, keydown, keyup, etc.
+- We can only have one event handler for a specific event type, but we can add multiple event listeners for it. [Medium article on event handler vs event listener](https://medium.com/geekculture/event-handlers-vs-event-listeners-in-javascript-b4086b8040b0)
 
 ## Knowledge Check
 > What is the DOM?
@@ -80,6 +81,8 @@ All three ways are regularly used, but using event listeners is definitively the
 
 > Why are event listeners the preferred way to handle events?
 
+Because we can create multiple handlers for the same event on the same target.
+
 > What are the benefits of using named functions in your listeners?
 
 Using named funtions in your listeners can clean up your code considerably, and is a really good idea if the function is something you are going to want to do in multiple places.
@@ -93,5 +96,8 @@ Using `querySelectorAll` we can get a nodelist of all of the items matching a sp
 `element.querySelector(selector)` returns a reference to the first match of selector. On the other hand, `element.querySelectorAll(selectors)` returns a "nodelist" containing references to all of the matches of the selectors.
 
 > What do as a "nodelist" contain?
+
+A nodelist is a collection that contains document nodes (element nodes, attribute nodes, and text nodes).
+[W3 article on nodelist](https://www.w3schools.com/js/js_htmldom_nodelist.asp#:~:text=A%20NodeList%20is%20a%20collection,is%20always%20a%20live%20collection.)
 
 > Explain the difference between "capture" and "bubbling".
