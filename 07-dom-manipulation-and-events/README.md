@@ -101,3 +101,7 @@ A nodelist is a collection that contains document nodes (element nodes, attribut
 [W3 article on nodelist](https://www.w3schools.com/js/js_htmldom_nodelist.asp#:~:text=A%20NodeList%20is%20a%20collection,is%20always%20a%20live%20collection.)
 
 > Explain the difference between "capture" and "bubbling".
+
+Capturing is the propagation from parent down to child, and bubbling is the propagation from child up to parent.
+More precisely, with capturing, the event is first captured by the outermost element and propagated to the inner elements.
+With bubbling, the event is first captured and handled by the innermost element and then propagated to the outer elements.
