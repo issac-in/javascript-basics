@@ -18,12 +18,24 @@ for (let i = 0; i <= MOUNTAINS.length; i++) {
 // Then, initialize the heading cells within the first <tr> child of table, pulling them however we can
 const tableHeaderRow = table.firstChild;
 const headers = Object.getOwnPropertyNames(MOUNTAINS[0]);
-for (header of headers) {
+for (let header of headers) {
     const tableHeader = document.createElement("th");
     tableHeader.innerText = header;
     tableHeaderRow.appendChild(tableHeader);
 }
 // Then from the 2nd <tr> to the last <tr> child of table,
+let mtnIndex = 0;
+const tableRows = table.children;
+for (tr of tableRows) {
+    if (tr === table.firstElementChild) continue;
+    // Populate table data cells accordingly
+    for (let header of headers) {
+        const tableData = document.createElement("td");
+        tableData.innerText = MOUNTAINS[mtnIndex][header];
+        tr.appendChild(tableData);
+    }
+    mtnIndex++;
+}
 
 // Add the <table> to the div with id mountains
 const divMountains = document.querySelector("div[id='mountains']");
