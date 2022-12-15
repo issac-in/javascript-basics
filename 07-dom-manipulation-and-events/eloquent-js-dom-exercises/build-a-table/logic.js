@@ -32,6 +32,8 @@ for (tr of tableRows) {
     for (let header of headers) {
         const tableData = document.createElement("td");
         tableData.innerText = MOUNTAINS[mtnIndex][header];
+        // Extra - right align cells that contain number values by setting their style.textAlign property to "right".
+        if (typeof MOUNTAINS[mtnIndex][header] === "number") { tableData.style.textAlign = "right"; }
         tr.appendChild(tableData);
     }
     mtnIndex++;
@@ -40,5 +42,3 @@ for (tr of tableRows) {
 // Add the <table> to the div with id mountains
 const divMountains = document.querySelector("div[id='mountains']");
 divMountains.appendChild(table);
-
-// Extra - right align cells that contain number values by setting their style.textAlign property to "right".
