@@ -9,10 +9,24 @@ const MOUNTAINS = [
 ];
 
 // Initialize the <table>
+const table = document.createElement("table");
 // To it, based on the length of MOUNTAINS, initialize that many <tr> children of <table>, + 1
+for (let i = 0; i <= MOUNTAINS.length; i++) {
+    const tableRow= document.createElement("tr");
+    table.appendChild(tableRow);
+}
 // Then, initialize the heading cells within the first <tr> child of table, pulling them however we can
+const tableHeaderRow = table.firstChild;
+const headers = Object.getOwnPropertyNames(MOUNTAINS[0]);
+for (header of headers) {
+    const tableHeader = document.createElement("th");
+    tableHeader.innerText = header;
+    tableHeaderRow.appendChild(tableHeader);
+}
 // Then from the 2nd <tr> to the last <tr> child of table,
-// initialize and populate <td> cells with values accordingly
+
 // Add the <table> to the div with id mountains
+const divMountains = document.querySelector("div[id='mountains']");
+divMountains.appendChild(table);
 
 // Extra - right align cells that contain number values by setting their style.textAlign property to "right".
